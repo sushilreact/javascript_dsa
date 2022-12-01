@@ -7,30 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Array Traversing</h1>
-    <input type="text" value="" id="element">
-    <button onclick=click_Fun()>click</button>
-    <script>
+    <h1>Array Traversing and Accessing </h1>
+     
+    <input type="number" name="" id="elmvalue" min="0" oninput="this.value = Math.abs(this.value)">
+    <button onclick=clickme()>Get array by position</button>
 
-// for(i=0;i<arr_val.length;i++)
-// {
-//     document.write(`array loaction is ${i} and ${arr_val[i]}<br>`)
-// }
-  
-let arr_val=[5,6,73,4,2,34,23,53,23,24]
-const click_Fun=()=>{
-    inputval= document.getElementById("element").value
-    if(inputval<arr_val.length && typeof parseInt(inputval)=== "number"){
-        alert(arr_val[inputval])
-    }
-    else if(Math.sign(inputval) === -inputval){ 
-        alert("Please ennter valide number")
-    }
-    else{
-        alert("enble")
-    }
+    <script>
+        let data_arr=[45,45,43,32,3,3,25,2,25,24,2]
+        const clickme=()=>{
+           let input_value =document.getElementById("elmvalue").value
+           if(input_value<data_arr.length){
+            alert(data_arr[input_value])
+           }
+           else{
+            alert("not found")
+           }
+            
+        
+        }
+//   for(i=0; i<data_arr.length;i++)
+//   {
     
-}
+//     document.write(`this is location ${i} and data ${data_arr[i] }<br>`)
+//   }
+       
+
     </script>
 
 </body>
